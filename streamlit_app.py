@@ -34,9 +34,6 @@ except URLError as e:
   streamlit.error()
 
 import snowflake.connector
-my_data_rows=my_cur.fetchall()
-streamlit.text("  THE Fruit loaded list contains:")
-streamlit.dataframe(my_data_rows)
 
 def insert_row_snowflake(new_fruit):
   with my_cnx.cursor()as my_cur:
