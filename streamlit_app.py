@@ -32,7 +32,7 @@ try:
       streamlit.dataframe(back_from_function)
 except URLError as e:
   streamlit.error()
-
+streamlit.stop()
 import snowflake.connector
 
 def insert_row_snowflake(new_fruit):
