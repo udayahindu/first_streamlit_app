@@ -31,4 +31,5 @@ my_cur.execute("select * from fruit_load_list")
 my_data_rows=my_cur.fetchall()
 streamlit.text("  THE Fruit loaded list contains:")
 streamlit.dataframe(my_data_rows)
-
+fruit_choices=streamlit.text_input("what fruit would u like information about",'kiwi')
+streamlit.write('user entered the '+fruit_choices)
